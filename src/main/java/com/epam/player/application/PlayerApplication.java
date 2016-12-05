@@ -1,4 +1,4 @@
-package com.epam.player.appliacation;
+package com.epam.player.application;
 
 
 import com.epam.player.configurations.ApplicationConfiguration;
@@ -15,12 +15,12 @@ import io.dropwizard.setup.Environment;
 
 
 
-public class BlogApplication extends Application<ApplicationConfiguration> {
+public class PlayerApplication extends Application<ApplicationConfiguration> {
 
 
 
     public static void main(String[] args) throws Exception {
-        new BlogApplication().run(args);
+        new PlayerApplication().run(args);
     }
 
     @Override

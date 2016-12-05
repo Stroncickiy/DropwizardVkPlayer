@@ -65,7 +65,7 @@
 									implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.epam.blog.appliacation.BlogApplication</mainClass>
+									<mainClass>com.epam.player.application.PlayerApplication</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
@@ -84,11 +84,13 @@
 					</execution>
 				</executions>
 				<configuration>
-					<executable>cmd</executable>
-					<workingDirectory>/target</workingDirectory>
+					<executable>java</executable>
+					<workingDirectory>./target</workingDirectory>
 					<arguments>
-						<argument>start java -jar player.jar
-							../src/main/resources/config.yml</argument>
+						<argument>-jar</argument>
+						<argument>player.jar</argument>
+						<argument>server</argument>
+						<argument>"../src/main/resources/config.yml"</argument>
 					</arguments>
 				</configuration>
 			</plugin>
