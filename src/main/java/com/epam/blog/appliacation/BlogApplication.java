@@ -29,8 +29,6 @@ public class BlogApplication extends Application<ApplicationConfiguration> {
 
     @Override
     public void run(ApplicationConfiguration applicationConfiguration, Environment environment) throws Exception {
-
-
         MongoClient mongoClient = new MongoClient(applicationConfiguration.getMongoUri(), applicationConfiguration.getMongoPort());
         DB db = mongoClient.getDB(applicationConfiguration.getMongoDbName());
         UserDAO userDAO = new UserDAO(db);
