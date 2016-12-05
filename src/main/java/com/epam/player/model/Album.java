@@ -1,4 +1,4 @@
-package com.epam.blog.model;
+package com.epam.player.model;
 
 import java.util.List;
 

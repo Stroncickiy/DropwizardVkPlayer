@@ -1,12 +1,12 @@
-package com.epam.blog.dao;
+package com.epam.player.dao;
 
-import com.epam.blog.model.User;
-import com.mongodb.DB;
+import java.util.List;
+
 import org.mongojack.DBCursor;
 import org.mongojack.JacksonDBCollection;
 
-
-import java.util.List;
+import com.epam.player.model.User;
+import com.mongodb.DB;
 
 
 public class UserDAO  {

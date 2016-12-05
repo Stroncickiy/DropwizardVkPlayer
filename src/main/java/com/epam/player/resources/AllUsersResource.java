@@ -1,12 +1,12 @@
-package com.epam.blog.resources;
+package com.epam.player.resources;
 
-import com.epam.blog.dao.UserDAO;
-import com.epam.blog.model.AuthorizationResult;
-import com.epam.blog.model.User;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
 
-import javax.ws.rs.*;
+import javax.ws.rs.CookieParam;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Invocation;
@@ -14,7 +14,12 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
+
+import com.epam.player.dao.UserDAO;
+import com.epam.player.model.AuthorizationResult;
+import com.epam.player.model.User;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Path("/authorize")
 @Produces(MediaType.APPLICATION_JSON)

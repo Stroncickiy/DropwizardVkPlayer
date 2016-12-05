@@ -1,25 +1,27 @@
-package com.epam.blog.resources;
+package com.epam.player.resources;
 
-        import com.epam.blog.dao.UserDAO;
-        import com.epam.blog.model.Album;
-        import com.epam.blog.model.Track;
-        import com.epam.blog.model.User;
-        import com.fasterxml.jackson.databind.JsonNode;
-        import com.fasterxml.jackson.databind.ObjectMapper;
-        import javax.ws.rs.CookieParam;
-        import javax.ws.rs.GET;
-        import javax.ws.rs.Path;
-        import javax.ws.rs.Produces;
-        import javax.ws.rs.client.Client;
-        import javax.ws.rs.client.ClientBuilder;
-        import javax.ws.rs.client.Invocation;
-        import javax.ws.rs.client.WebTarget;
-        import javax.ws.rs.core.MediaType;
-        import javax.ws.rs.core.Response;
         import java.io.IOException;
-        import java.util.ArrayList;
-        import java.util.Iterator;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.ws.rs.CookieParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Invocation;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import com.epam.player.dao.UserDAO;
+import com.epam.player.model.Album;
+import com.epam.player.model.Track;
+import com.epam.player.model.User;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 @Path("/albums")

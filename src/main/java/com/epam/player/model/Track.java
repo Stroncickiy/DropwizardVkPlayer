@@ -1,4 +1,4 @@
-package com.epam.blog.model;
+package com.epam.player.model;
 
 /**
  * Created by Yaroslav_Strontsitsk on 2/1/2016.

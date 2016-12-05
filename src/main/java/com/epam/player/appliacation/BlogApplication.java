@@ -1,12 +1,13 @@
-package com.epam.blog.appliacation;
+package com.epam.player.appliacation;
 
 
-import com.epam.blog.configurations.ApplicationConfiguration;
-import com.epam.blog.dao.UserDAO;
-import com.epam.blog.resources.AlbumsResource;
-import com.epam.blog.resources.AllUsersResource;
+import com.epam.player.configurations.ApplicationConfiguration;
+import com.epam.player.dao.UserDAO;
+import com.epam.player.resources.AlbumsResource;
+import com.epam.player.resources.AllUsersResource;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
+
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
