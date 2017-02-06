@@ -1,4 +1,4 @@
-package com.epam.blog.configurations;
+package com.epam.player.configurations;
 
 
 import io.dropwizard.Configuration;

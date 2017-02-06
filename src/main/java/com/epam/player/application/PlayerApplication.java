@@ -1,12 +1,13 @@
-package com.epam.blog.appliacation;
+package com.epam.player.application;
 
 
-import com.epam.blog.configurations.ApplicationConfiguration;
-import com.epam.blog.dao.UserDAO;
-import com.epam.blog.resources.AlbumsResource;
-import com.epam.blog.resources.AllUsersResource;
+import com.epam.player.configurations.ApplicationConfiguration;
+import com.epam.player.dao.UserDAO;
+import com.epam.player.resources.AlbumsResource;
+import com.epam.player.resources.AllUsersResource;
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
+
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -14,12 +15,12 @@ import io.dropwizard.setup.Environment;
 
 
 
-public class BlogApplication extends Application<ApplicationConfiguration> {
+public class PlayerApplication extends Application<ApplicationConfiguration> {
 
 
 
     public static void main(String[] args) throws Exception {
-        new BlogApplication().run(args);
+        new PlayerApplication().run(args);
     }
 
     @Override
@@ -29,8 +30,6 @@ public class BlogApplication extends Application<ApplicationConfiguration> {
 
     @Override
     public void run(ApplicationConfiguration applicationConfiguration, Environment environment) throws Exception {
-
-
         MongoClient mongoClient = new MongoClient(applicationConfiguration.getMongoUri(), applicationConfiguration.getMongoPort());
         DB db = mongoClient.getDB(applicationConfiguration.getMongoDbName());
         UserDAO userDAO = new UserDAO(db);
